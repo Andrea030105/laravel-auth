@@ -38,9 +38,11 @@
                                 <button class="ms-2 btn btn-square btn-primary">
                                     <i class="fa-solid fa-eye"></i>
                                 </button>
-                                <button class="ms-2 btn btn-square btn-warning">
-                                    <i class="fa-solid fa-pencil"></i>
-                                </button>
+                                <a href="{{ route('admin.projects.edit', [ 'project'=> $project->id ]) }}">
+                                    <button class="ms-2 btn btn-square btn-warning">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </button>
+                                </a>
                                 <button class="ms-2 btn btn-square btn-danger">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
