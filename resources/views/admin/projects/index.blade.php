@@ -35,9 +35,11 @@
                         <td>{{$project->description}}</td>
                         <td>
                             <div class="d-flex align-items-center justify-content-center">
-                                <button class="ms-2 btn btn-square btn-primary">
-                                    <i class="fa-solid fa-eye"></i>
-                                </button>
+                                <a href="{{ route('admin.projects.show', [ 'project'=> $project->id ]) }}">
+                                    <button class="ms-2 btn btn-square btn-primary">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                </a>
                                 <a href="{{ route('admin.projects.edit', [ 'project'=> $project->id ]) }}">
                                     <button class="ms-2 btn btn-square btn-warning">
                                         <i class="fa-solid fa-pencil"></i>
