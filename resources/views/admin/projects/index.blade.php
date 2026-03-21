@@ -3,6 +3,15 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col my-3">
+            @if(session('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+            @endif
+        </div>
+    </div>
+    <div class="row">
+        <div class="col my-3">
             <a href="{{route('admin.projects.create')}}">
                 <button class="btn btn-square btn-primary">
                     Add Project
