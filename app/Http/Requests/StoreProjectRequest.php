@@ -27,4 +27,13 @@ class StoreProjectRequest extends FormRequest
             'description' => ['nullable', 'string'],
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'title.required' => 'Il titolo è obbligatorio!',
+            'title.max' => 'Il titolo non può superare 150 caratteri!',
+            'title.unique' => 'Questo titolo esiste già!',
+        ];
+    }
 }
